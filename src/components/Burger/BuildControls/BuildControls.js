@@ -18,7 +18,9 @@ const buildControls = (props) => (
                 ingredientLabel={control.label}
                 // type needs to be passed to addIngredientHandler so
                 // we use an anonymous function to do so
-                added={() => props.ingredientAdded(control.type)} />
+                added={() => props.ingredientAdded(control.type)} 
+                removed={() => props.ingredientRemoved(control.type)}
+                disabled={props.disabled[control.type]} />
             ))}
         </div>
 )
