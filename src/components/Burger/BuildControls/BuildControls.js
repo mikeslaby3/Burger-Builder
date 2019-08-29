@@ -10,10 +10,15 @@ const controls = [
     { label: 'Meat', type: 'meat'}
 ];
 
-const buildControls = () => (
+const buildControls = (props) => (
         <div className={classes.BuildControls}>
             {controls.map(control => (
-                <BuildControl key={control.label} ingredientLabel={control.label} />
+                <BuildControl
+                key={control.label} 
+                ingredientLabel={control.label}
+                // type needs to be passed to addIngredientHandler so
+                // we use an anonymous function to do so
+                added={() => props.ingredientAdded(control.type)} />
             ))}
         </div>
 )
