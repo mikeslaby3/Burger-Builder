@@ -23,7 +23,7 @@
 }
 
 .Close {
-    transform: translateX(-1)
+    transform: translateX(-100%)
 }
 
 .Logo {
